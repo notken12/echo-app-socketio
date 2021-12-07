@@ -37,6 +37,6 @@ io.on('connection', function (socket) {
     
     socket.on('send message', function (msg) {
         console.log('message: ' + msg + ' received by ' + serverName);
-        socket.emit('echo message', msg);
+        io.sockets.emit('echo message', msg);
     });
 });
